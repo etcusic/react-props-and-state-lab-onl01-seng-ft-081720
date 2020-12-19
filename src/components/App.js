@@ -2,7 +2,6 @@ import React from 'react'
 
 import Filters from './Filters'
 import PetBrowser from './PetBrowser'
-import Pet from './Pet'
 
 class App extends React.Component {
   constructor() {
@@ -16,10 +15,10 @@ class App extends React.Component {
     }
   }
 
+  // need to add a fetch POST
+
   onChangeType = (type) => {
-    console.log(type.value)
     this.state.filters.type = type.value
-    console.log(this.state.filters.type)
   }
 
   onFindPetsClick = () => {
@@ -40,8 +39,7 @@ class App extends React.Component {
   }
 
   onAdoptPet = (id) => {
-    this.state.pets.find(pet => pet.id === id).isAdopted = true
-    console.log(this.state.pets.find(pet => pet.id === id))
+    return this.state.pets.find(pet => pet.id === id).isAdopted = true
   }
 
   render() {

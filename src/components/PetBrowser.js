@@ -9,7 +9,7 @@ class PetBrowser extends React.Component {
           <div className="ui cards">
             <Pet 
               pet={disPet}
-              onAdoptPet={this.props.onAdoptPet}
+              onAdoptPet={this.props.onAdoptPet(disPet.id)}
             />
           </div>
         )
